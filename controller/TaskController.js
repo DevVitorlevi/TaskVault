@@ -24,4 +24,15 @@
             const task = await Task.findOne({raw:true,where:{id}})
             res.render('task/edit',{task})
         }
+        static async updateTask(req,res){
+            const {id,title,description} =req.body
+
+            const TaskData = {
+                title:title,
+                description:description
+            }
+            await Task.update(TaskData,{where:{id}})
+
+            res.redirect('/task/all')
+        }
     }
