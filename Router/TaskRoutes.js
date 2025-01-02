@@ -8,5 +8,6 @@ const TaskController = require('../controller/TaskController')
 
 router.get('/create', TaskController.createTask)
 router.post('/add', TaskController.addTask)
+router.get('/all',TaskController.allTask)
 
 module.exports = router

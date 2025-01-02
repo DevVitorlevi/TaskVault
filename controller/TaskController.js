@@ -14,4 +14,9 @@
             await Task.create(TaskData)
             res.redirect('/task/all')
         }
+
+        static async allTask(req,res){
+            const task = await Task.findAll({raw:true})
+            res.render('task/all',{task})
+        }
     }
