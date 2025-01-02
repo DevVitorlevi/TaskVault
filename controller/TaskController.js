@@ -19,4 +19,9 @@
             const task = await Task.findAll({raw:true})
             res.render('task/all',{task})
         }
+        static async editTask(req,res){
+            const id = req.params.id
+            const task = await Task.findOne({raw:true,where:{id}})
+            res.render('task/edit',{task})
+        }
     }

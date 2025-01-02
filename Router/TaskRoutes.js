@@ -9,5 +9,6 @@ const TaskController = require('../controller/TaskController')
 router.get('/create', TaskController.createTask)
 router.post('/add', TaskController.addTask)
 router.get('/all',TaskController.allTask)
+router.get('/edit/:id',TaskController.editTask)
 
 module.exports = router
