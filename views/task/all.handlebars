@@ -1,1 +1,30 @@
-<h1>todas tarefas</h1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/arquivos/task.css">
+<h1 id="title">Todas As Tarefas</h1>
+{{#each task}}
+    
+<section>
+    <div class="task">
+        {{#if this.done}}
+            <h1 class="done">{{this.title}}</h1>
+        {{else}}
+            <h1>{{this.title}}</h1>
+        {{/if}}
+                    <p>{{this.description}}</p>
+                    <div class="actions">
+                        <form action="/task/statustaks" method="POST">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <input type="hidden" name="feita" value="{{this.done}}">
+                            <button id="verde"><i class="bi bi-check-lg"></i></button>
+                            </form>
+                        <form action="/task/delete" method="POST">
+                        <input type="hidden"  name="id" value="{{this.id}}">
+                        <button type="submit" id="vermelho"><i class="bi bi-trash-fill"></i></button>
+                        </form>
+                        <button id="azul"><a href="/tarefa/editar/{{this.id}}"><i class="bi bi-pen-fill"></i></a></button>
+                    </div>
+                
+        </ul>
+    </div>
+        {{/each}}
+</section>
