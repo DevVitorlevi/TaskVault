@@ -4,4 +4,8 @@ const express = require('express');
 const router = express.Router();
 
 // Importa o controlador das tarefas, que contém os métodos responsáveis pela lógica das rotas
-const TaskController = require('../Controllers/TaskController')
+const TaskController = require('../controller/TaskController')
+
+router.get('/create', TaskController.createTask)
+
+module.exports = router
