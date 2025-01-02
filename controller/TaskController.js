@@ -41,4 +41,13 @@
             await Task.destroy({where:{id}})
             res.redirect('/task/all')
         }
+        static async statusTask (req,res){
+            const id = req.body.id
+
+            const Status ={
+                done:req.body.done === '0' ? true : false
+            }
+            await Task.update(Status,{where:{id}})
+            res.redirect('/task/all')
+        }
     }

@@ -12,9 +12,9 @@
         {{/if}}
                     <p>{{this.description}}</p>
                     <div class="actions">
-                        <form action="/task/statustaks" method="POST">
+                        <form action="/task/statustask" method="POST">
                         <input type="hidden" name="id" value="{{this.id}}">
-                        <input type="hidden" name="feita" value="{{this.done}}">
+                        <input type="hidden" name="done" value="{{this.done}}">
                             <button id="verde"><i class="bi bi-check-lg"></i></button>
                             </form>
                         <form action="/task/delete" method="POST">
