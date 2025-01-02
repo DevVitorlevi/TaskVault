@@ -1,1 +1,14 @@
-<h1>hbfc</h1>
+<link rel="stylesheet" href="/arquivos/form.css">
+<main>
+    <div class="container">
+        <h1>Criar Tarefa</h1>
+            <form action="/task/add" method="POST">
+            <div class="inputs">
+                <input type="text" required name="title" id="input">
+                <label>Fale Qual é a Tarefa</label>           
+            </div>
+            <textarea name="description" cols="20" rows="10" placeholder="Descreva a sua Tarefa"></textarea>
+            <button type="submit">Criar</button>
+            </form>
+    </div>
+</main>
