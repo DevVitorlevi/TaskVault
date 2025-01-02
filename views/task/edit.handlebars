@@ -1,0 +1,15 @@
+    <link rel="stylesheet" href="/arquivos/form.css">
+<main>
+    <div class="container">
+        <h1>Editar Tarefa</h1>
+            <form action="/task/update" method="POST">
+            <div class="inputs">
+                <input type="hidden" name="id" value="{{task.id}}">
+                <input type="text" required name="title" id="input" value="{{task.title}}">
+                <label>Fale Qual é a Tarefa</label>           
+            </div>
+            <textarea name="description" cols="20" rows="10" placeholder="Descreva a sua Tarefa">{{task.description}}</textarea>
+            <button type="submit">Editar</button>
+            </form>
+    </div>
+</main>
