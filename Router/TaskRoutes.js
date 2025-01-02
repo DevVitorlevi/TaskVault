@@ -11,5 +11,6 @@ router.post('/add', TaskController.addTask)
 router.get('/all',TaskController.allTask)
 router.get('/edit/:id',TaskController.editTask)
 router.post('/update', TaskController.updateTask)
+router.post('/delete', TaskController.deleteTask)
 
 module.exports = router

@@ -35,4 +35,10 @@
 
             res.redirect('/task/all')
         }
+
+        static async deleteTask(req,res){
+            const id = req.body.id
+            await Task.destroy({where:{id}})
+            res.redirect('/task/all')
+        }
     }
