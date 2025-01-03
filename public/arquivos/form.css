@@ -82,7 +82,7 @@ button {
     color: var(--color-white);
     cursor: pointer;
     transition: .5s;
-    width: 70%;
+    width: 50%;
     color: white;
 }
 button:hover {
