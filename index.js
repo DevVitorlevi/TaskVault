@@ -19,4 +19,4 @@ app.use(express.static('public'));
 
 // Rotas
 app.use('/task', TaskRoutes);
-    conn.sync().then(()=>app.listen(3000)).catch((e=>console.log(e)))
+    conn.sync({force:true}).then(()=>app.listen(3000)).catch((e=>console.log(e)))
